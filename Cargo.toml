@@ -1,0 +1,24 @@
+[workspace]
+resolver = "2"
+members = [
+    "bin/arb",
+    "crates/logger",
+    "crates/dex-indexer",
+    "crates/version",
+]
+
+[workspace.dependencies]
+anyhow = "1.0"
+burberry = { git = "https://github.com/tonyke-bot/burberry.git", rev = "8bdb3cadf18e9be01622f9acbe562ee2d4f65ac2", default-features = false, features = [
+    "telegram",
+] }
+clap = { version = "4.5", features = ["derive", "env"] }
+dex-indexer = { path = "crates/dex-indexer" }
+ethers = { version = "2.0", features = ["abigen"] }
+eyre = "0.6.12"
+version = { path = "crates/version" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0", features = ["unbounded_depth"] }
+
+[profile.release]
+debug = false

@@ -1,0 +1,13 @@
+[
+    {
+        "type": "event",
+        "name": "PairCreated",
+        "inputs": [
+            { "name": "token0", "type": "address", "indexed": true },
+            { "name": "token1", "type": "address", "indexed": true },
+            { "name": "pair", "type": "address", "indexed": false },
+            { "name": "pair_count", "type": "uint256", "indexed": false }
+        ],
+        "anonymous": false
+    }
+]
